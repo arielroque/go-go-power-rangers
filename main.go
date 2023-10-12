@@ -1,18 +1,19 @@
 package main
 
 import (
-	"net/http"
+	"example.com/go-go-power-rangers/controllers"
+	"example.com/go-go-power-rangers/models"
 	"github.com/gin-gonic/gin"
 )
 
-func main(){
+func main() {
 	router := gin.Default()
 
-	router.GET("/",func(c *gin.Context){
-		c.JSON(http.StatusOK,gin.H{"data":"hello-world"})
-	})
+	models.ConnectDatabase()
+
+	router.POST("/seasons", controllers.CreateSeason)
+	router.GET("/seasons", controllers.FindSeasons)
 
 	router.Run()
 
-	
 }
