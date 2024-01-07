@@ -1,5 +1,43 @@
+![Go](https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white)&nbsp;&nbsp; 
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)&nbsp;&nbsp;
+
 # go-go-power-rangers
 A simple golang API whose purpose we will discover later...
+
+## :bookmark: Requirements
+- [Go](https://go.dev/)
+- [Docker](https://docs.docker.com/engine/install/ubuntu/) 
+
+## :triangular_flag_on_post: Starting
+Let's start by cloning the repository
+
+```bash
+# Clone repository
+git clone https://github.com/arielroque/go-go-power-rangers.git
+
+# Go to go-go-power-rangers
+cd go-go-power-rangers
+```
+
+## Running
+
+### Debug version
+
+```go
+go run main.go
+```
+
+### Release version
+
+```bash
+# Build image
+docker build -t go-go-power-rangers . 
+
+# Run container
+docker run -p 8080:8080 go-go-power-rangers
+```
+
+## :rowboat: Request Samples
 
 ```bash
 # POST
