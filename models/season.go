@@ -10,3 +10,8 @@ type CreateSeasonInput struct {
 	Title       string `json:"title" binding:"required"`
 	Description string `json:"description" binding:"required"`
 }
+
+type UpdateSeasonInput struct {
+	Title       string `json:"title"`
+	Description string `json:"description"`
+}

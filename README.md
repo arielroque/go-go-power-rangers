@@ -40,12 +40,23 @@ docker run -p 8080:8080 go-go-power-rangers
 ## :rowboat: Request Samples
 
 ```bash
-# POST
+# Post
 curl -X POST -H "Content-Type: application/json" -d '{
   "title": "Power Ranger",
   "description": "blabla"
   }' http://localhost:8080/seasons
 
-# GET
+# Get
 curl http://localhost:8080/seasons
+
+# Get by ID
+curl http://localhost:8080/seasons/1
+
+# Patch
+curl -X PATCH -H "Content-Type: application/json" -d '{
+  "title": "abroba"
+  }' http://localhost:8080/seasons/1
+
+# DELETE
+curl -X DELETE http://localhost:8080/seasons/1
 ```

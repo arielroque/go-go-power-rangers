@@ -13,7 +13,14 @@ func main() {
 
 	router.POST("/seasons", controllers.CreateSeason)
 	router.GET("/seasons", controllers.FindSeasons)
+	router.GET("/seasons/:id", controllers.FindSeason)
+	router.PATCH("/seasons/:id", controllers.UpdateSeason)
+	router.DELETE("seasons/:id", controllers.DeleteSeason)
 
-	router.Run()
+	error := router.Run()
+
+	if error != nil {
+		return
+	}
 
 }
