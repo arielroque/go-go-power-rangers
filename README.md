@@ -2,7 +2,7 @@
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)&nbsp;&nbsp;
 
 # go-go-power-rangers
-A simple golang API whose purpose we will discover later...
+A simple golang API to show Power Rangers seasons
 
 ## :bookmark: Requirements
 - [Go](https://go.dev/)
@@ -19,11 +19,13 @@ git clone https://github.com/arielroque/go-go-power-rangers.git
 cd go-go-power-rangers
 ```
 
-## Running
+## :runner: Running
+Let's run the API
 
 ### Debug version
 
-```go
+```bash
+# Run debug version
 go run main.go
 ```
 
@@ -37,7 +39,16 @@ docker build -t go-go-power-rangers .
 docker run -p 8080:8080 go-go-power-rangers
 ```
 
+## :cityscape: Populate data (optional)
+If you want to populate the API before use, you can use the following script
+
+```bash
+# Populate api
+./populate_api.sh
+```
+
 ## :rowboat: Request Samples
+Finally, to make requests to API, you can use the following commands
 
 ```bash
 # Post
@@ -57,6 +68,6 @@ curl -X PATCH -H "Content-Type: application/json" -d '{
   "title": "abroba"
   }' http://localhost:8080/seasons/1
 
-# DELETE
+# Delete
 curl -X DELETE http://localhost:8080/seasons/1
 ```
